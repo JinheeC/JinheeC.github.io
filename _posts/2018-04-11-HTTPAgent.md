@@ -2,6 +2,8 @@
 title: "node js 의 HTTP Agent"
 categories:
 - Node.js
+excerpt: |
+  에이전트는 Http clients 를 위해 연결을 유지시키고 재사용하도록 관리하는 일을 한다. 주어진 호스트와 포트에 대해 대기하고 있는 요청들을 유지하고 하나의 소캣 연결을 각각의 대기 요청이 다 끝날 때 까지 재사용한다. 그 이후에 파괴시키거나 풀에 넣어놓고 나중에 요청이 오면 다시 사용하게 된다. 파괴될 것인지 아니면 풀에 넣어두고 다시 사용할 것인지는 KeepAlive설정에 달렸다.
 feature_text: |
   node js 의 HTTP Agent에 대해
 ---

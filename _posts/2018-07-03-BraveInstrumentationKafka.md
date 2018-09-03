@@ -2,6 +2,10 @@
 title: "Kafka Message 추적하기 - Zipkin, Brave"
 categories: 
 - Kafka
+excerpt: |
+  카프카 producer 와 consumer 에 데코레이터를 추가해 추적하는 방법이다.
+  TracingProducer - 레코드당 producer span 을 만들고 헤더를 통해 전파한다.
+  TracingConsumer - poll() 이 실행될때 consumer span 을 만들고 헤더에 span 값이 있으면 trace 를 만들어 완성한다.
 feature_text: |
   Zipkin, Brave 를 이용해서 Kafka Client Message 를 추적하는 방법에 대해
 ---

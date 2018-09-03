@@ -2,6 +2,10 @@
 title: "Kafka Streams 1.1.0"
 categories: 
 - Kafka
+excerpt: |
+  이벤트 시간 `Event time`: 이벤트가 발생했거나 데이터 레코드가 발생한 시점. 즉, 해당 이벤트를 만들어서 카프카에 주는 그 발생 주체에서 이벤트가 발생된 시점을 말한다. 
+  처리시간 `Processing time`: 데이터 레코드가 처리되는 시점, 레코드가 소비되는 시점. 처리시간은 원래 이벤트 시간보다 몇 ms, 몇 s, 또는 몇 hour 이후일 수 있다. 
+  등록시간 `Ingestion time`: 데이터 레코드가 카프카 브로커에 의해 토픽 파티션에 저장되는 시간. 
 feature_text: |
   Kafka Streams 1.1.0 공식문서 내용입니다.
 ---

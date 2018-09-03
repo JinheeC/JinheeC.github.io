@@ -2,6 +2,8 @@
 title: "Spring Cloud Sleuth (2.0.0.M9) - Zipkin 과 Brave"
 categories:
 - Zipkin
+excerpt: |
+  스팬 (Span) : 기본 작업 단위. 예를 들어 RPC(원격 프로시저 호출) 전송은 새로운 span 이다. 스팬은 스팬에 대한 고유 한 64 비트 ID와 스팬이 속한 추적에 대한 또 다른 64 비트 ID로 식별됩니다. Span에는 설명, 타임 스탬프 이벤트, 키 - 값 주석 (태그),  parent Spna ID 및 프로세스 ID (일반적으로 IP 주소)와 같은 다른 데이터를 가진다.
 feature_text: |
   Zipkin 과 Brave에 대해 
 ---

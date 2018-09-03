@@ -2,6 +2,8 @@
 title: "Spring Kafka 2.1.4 - Stateful Retry"
 categories: 
 - Kafka
+excerpt: |
+  상태가 있는 리트라이가 나오게 된 배경 부터 먼저 설명하자면, 지금 이 문서는 spring kafka 2.1.4 버전을 기준으로 작성하고 있는데 직전 버전인 2.1.3 에서 처음 나온 개념이다. 이 개념이 나온 이유는 `max.poll.interval.ms 초과 문제` 로부터 나오게 되었는데 이 문제는 아래와 같다.
 feature_text: |
   Spring Kafka 2.1.4 의 Stateful Retry 에 대해서
 ---
