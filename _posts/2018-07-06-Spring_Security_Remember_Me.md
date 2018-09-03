@@ -7,6 +7,7 @@ excerpt: |
   이 의미는 key와 edaToolsUserDetailsService(맞는 사용자인지 확인하는 로직)를 가지고 토큰기반의 RememberMeService 를 만들어서 사용하겠다는 뜻이고 그 Key 와 같은 Key 로 RememberMeConfigurer 에서 init() 과정을 통해 
 feature_text: |
   Spring Security Remember Me 가 동작하지 않는 경우
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 

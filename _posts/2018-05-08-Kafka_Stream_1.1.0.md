@@ -8,6 +8,7 @@ excerpt: |
   등록시간 `Ingestion time`: 데이터 레코드가 카프카 브로커에 의해 토픽 파티션에 저장되는 시간. 
 feature_text: |
   Kafka Streams 1.1.0 공식문서 내용입니다.
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 공식문서 번역 + 이해한 내용 첨언한 글입니다.
 

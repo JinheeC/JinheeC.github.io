@@ -7,6 +7,7 @@ excerpt: |
   Spring Framework 의 주요 개념인 IOC, AOP, DI 를 이해하기 위해서는 디자인 패턴을 먼저 이해할 필요가 있다. 먼저 디자인 패턴을 설명하려고 한다.
 feature_text: |
   Design Pattern과 Spring Framework
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 * table of contents

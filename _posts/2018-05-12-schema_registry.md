@@ -7,6 +7,7 @@ excerpt: |
   confluent-x.x.x 파일을 받았으면 해당 디렉토리로 이동해서 아래와 같이 실행하면 sample properties 를 가지고 뜨는 것을 확인 할 수 있다.
 feature_text: |
   Confluent의 Schema Registry를 구축하는 과정에 대해
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 

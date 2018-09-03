@@ -7,6 +7,7 @@ excerpt: |
   같은 응답결과를 원하는 요청의 경우에는 가지고 있는 즉, 캐시에 저장된 이전 호출의 결과를 리턴해서 성능향상을 하는 것이다.
 feature_text: |
   axios 로 호출되는 결과를 캐싱하는 모듈 정리
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 * table of contents

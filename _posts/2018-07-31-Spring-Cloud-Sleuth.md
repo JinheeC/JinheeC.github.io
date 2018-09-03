@@ -6,6 +6,7 @@ excerpt: |
   기존의 Brave-Instrumentation for kafka client 의 경우 spring kafka 와 같이 쓰려면 spring kafka 가 한번 wrapping 하게 하기위해서 DefaultKafkaProducerFactory, DefaultKafkaConsumerFactory 를 상속 받아서 아래와 같이 직접 wrapping 을 해야 했다.
 feature_text: |
   Spring Cloud Sleuth 로 Zipkin tracing 을 하는 방법에 대해
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 * table of contents

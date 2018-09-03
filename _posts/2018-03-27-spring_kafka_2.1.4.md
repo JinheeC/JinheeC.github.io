@@ -6,6 +6,7 @@ excerpt: |
   Spring kafka 에서 토픽만들기, 메세지 보내기(produce) 메세지 받기 (consume) 등 가장 기본이 되는 내용에 대한 정리입니다.
 feature_text: |
    Spring Kafka 2.1.4 의 기본 내용에 대해
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 * table of contents

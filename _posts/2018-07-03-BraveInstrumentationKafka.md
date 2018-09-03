@@ -8,6 +8,7 @@ excerpt: |
   TracingConsumer - poll() 이 실행될때 consumer span 을 만들고 헤더에 span 값이 있으면 trace 를 만들어 완성한다.
 feature_text: |
   Zipkin, Brave 를 이용해서 Kafka Client Message 를 추적하는 방법에 대해
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 * table of contents

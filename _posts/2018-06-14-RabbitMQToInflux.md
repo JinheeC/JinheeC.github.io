@@ -6,6 +6,7 @@ excerpt: |
   작업 배경은 RabbitMQ에 쌓이는 데이터를 RabbitMQ로 부터 Json 형태로 값을 받아와 InfluxDB 에 적재하고 그 데이터를 Grafana Dashboard 로 뿌려줘야하는 상황이었다. 이 글은 RabbitMQ -> InfluxDB -> Grafana 단계의 RabbitMQ -> InfluxDB 단계만을 설명한다.
 feature_text: |
   RabbitMQ 데이터를 Influx에 적재했던 기록
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 

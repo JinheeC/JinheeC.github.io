@@ -6,6 +6,7 @@ excerpt: |
   Node js 에서 발생하는 EADDRNOTAVAIL 문제 점유율 문제에 대한 이유와 해결법입니다.
 feature_text: |
   EADDRNOTAVAIL 문제, CPU sy. 점유율 문제에 대해서
+feature_image: "https://picsum.photos/2560/600?random"
 ---
 
 * table of contents
