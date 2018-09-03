@@ -7,7 +7,6 @@ excerpt: |
 feature_text: |
   Zipkin 과 Brave에 대해 
 ---
-# Spring cloud sleuth 2.0.0.M9
 
 * table of contents
 {:toc .toc}

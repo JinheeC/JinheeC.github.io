@@ -8,8 +8,6 @@ feature_text: |
   Spring Cloud Sleuth 로 Zipkin tracing 을 하는 방법에 대해
 ---
 
-# Spring Cloud Sleuth
-
 * table of contents
 {:toc .toc}
 

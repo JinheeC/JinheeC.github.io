@@ -9,7 +9,6 @@ feature_text: |
   Confluent의 Schema Registry를 구축하는 과정에 대해
 ---
 
-# Coufluent - Schema Registry 구축과정
 
 * table of contents
 {:toc .toc}

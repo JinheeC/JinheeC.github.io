@@ -8,7 +8,6 @@ excerpt: |
 feature_text: |
   axios 로 호출되는 결과를 캐싱하는 모듈 정리
 ---
-#Node js 에서 Cache 이용하기
 
 * table of contents
 {:toc .toc}

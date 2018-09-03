@@ -9,8 +9,6 @@ feature_text: |
   Spring Security Remember Me 가 동작하지 않는 경우
 ---
 
-# Spring Security - Cookie 기반 Remember Me 동작을 안할 경우
-
 
 * table of contents
 {:toc .toc}

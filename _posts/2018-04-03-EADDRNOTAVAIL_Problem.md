@@ -7,7 +7,6 @@ excerpt: |
 feature_text: |
   EADDRNOTAVAIL 문제, CPU sy. 점유율 문제에 대해서
 ---
-# EADDRNOTAVAIL 문제, CPU sy. 영역의 점유율 문제
 
 * table of contents
 {:toc .toc}

@@ -9,8 +9,6 @@ feature_text: |
   Design Pattern과 Spring Framework
 ---
 
-# Design Pattern과 Spring Framework
-
 * table of contents
 {:toc .toc}
 

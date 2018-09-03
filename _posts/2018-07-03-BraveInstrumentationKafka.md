@@ -10,9 +10,6 @@ feature_text: |
   Zipkin, Brave 를 이용해서 Kafka Client Message 를 추적하는 방법에 대해
 ---
 
-# Brave Kafka instrumentation
-
-
 * table of contents
 {:toc .toc}
 

@@ -7,7 +7,6 @@ excerpt: |
 feature_text: |
   node js 의 HTTP Agent에 대해
 ---
-# node js 의 HTTP Agent
 
 * table of contents
 {:toc .toc}

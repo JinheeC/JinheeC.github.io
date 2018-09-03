@@ -9,7 +9,6 @@ excerpt: |
 feature_text: |
   Kafka Streams 1.1.0 공식문서 내용입니다.
 ---
-# Kafka stream
 공식문서 번역 + 이해한 내용 첨언한 글입니다.
 
 * table of contents

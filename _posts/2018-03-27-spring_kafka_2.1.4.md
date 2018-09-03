@@ -7,7 +7,6 @@ excerpt: |
 feature_text: |
    Spring Kafka 2.1.4 의 기본 내용에 대해
 ---
-# Spring Kafka 2.1.4
 
 * table of contents
 {:toc .toc}

@@ -7,7 +7,6 @@ excerpt: |
 feature_text: |
   Spring Kafka 2.1.4 의 Stateful Retry 에 대해서
 ---
-# Stateful Retry
 
 * table of contents
 {:toc .toc}

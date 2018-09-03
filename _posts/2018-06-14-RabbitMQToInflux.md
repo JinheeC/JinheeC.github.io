@@ -8,8 +8,6 @@ feature_text: |
   RabbitMQ 데이터를 Influx에 적재했던 기록
 ---
 
-# Telegraf 변경작업
-
 
 * table of contents
 {:toc .toc}
