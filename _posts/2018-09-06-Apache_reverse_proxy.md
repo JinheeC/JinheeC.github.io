@@ -116,8 +116,11 @@ GroupName: user1 user2 user3 user4
 
 ## Basic auth 화면
 
-* Chrome 접속 화면
+* Chrome 접속 화면 
+
 ![Alt text](https://monosnap.com/image/UP2aRMTUpKCIbiJQqf0xD549B1r5xR)
-* Safari 접속 화면
+
+* Safari 접속 화면 
+
 ![Alt text](https://monosnap.com/image/Sz2qV1JhpEYTkWLfnno39iA73tmexm)
 

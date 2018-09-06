@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1574c279-a1d0-4bda-8126-b72a4917ee61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_posts/2018-09-06-Apache_reverse_proxy.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-09-06-Apache_reverse_proxy.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-09-06-Apache_reverse_proxy.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,16 +53,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="542" />
+          <entry key="md" value="544" />
           <entry key="scss" value="9" />
-          <entry key="txt" value="76" />
+          <entry key="txt" value="109" />
           <entry key="yml" value="158" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="542" />
-          <entry key="PLAIN_TEXT" value="76" />
+          <entry key="Markdown" value="544" />
+          <entry key="PLAIN_TEXT" value="109" />
           <entry key="SCSS" value="9" />
           <entry key="YAML" value="158" />
         </counts>
@@ -161,8 +159,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-09-06-Apache_reverse_proxy.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="425">
-                <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <first_editor relative-caret-position="679">
+                <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
               </first_editor>
               <second_editor />
             </state>
@@ -430,7 +428,7 @@
       <option name="presentableId" value="Default" />
       <updated>1535940613258</updated>
       <workItem from="1535940614785" duration="7791000" />
-      <workItem from="1536025481645" duration="1292000" />
+      <workItem from="1536025481645" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="add excerpt">
       <created>1535953691346</created>
@@ -474,11 +472,25 @@
       <option name="project" value="LOCAL" />
       <updated>1535966750434</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add reverse proxy">
+      <created>1536219202129</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1536219202129</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add excerpt">
+      <created>1536219362782</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1536219362782</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9083000" />
+    <option name="totallyTimeSpent" value="9490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -521,12 +533,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add excerpt" />
     <MESSAGE value="edit contents" />
     <MESSAGE value="edit content width" />
     <MESSAGE value="add images" />
     <MESSAGE value="add avatar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add avatar" />
+    <MESSAGE value="add reverse proxy" />
+    <MESSAGE value="add excerpt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add excerpt" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/logo.svg">
@@ -771,8 +784,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-09-06-Apache_reverse_proxy.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="425">
-            <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <first_editor relative-caret-position="679">
+            <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
           </first_editor>
           <second_editor />
         </state>
