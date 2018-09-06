@@ -3,7 +3,7 @@ title: "Apache Reverse Proxy 접근 암호화와 Port Forwarding"
 categories: 
 - Apache
 excerpt: |
-  
+  Forward Proxy 와의 가장 큰 차이점은 유저(접속하려는 자)는 프록시 서버로 요청한다는 것을 모른다는 점이다. Forward 의 경우 프록시임을 알고 프록시에게 요청해서 프록시가 다시 해당 서버에 요청을 하고 그 결과를 유저에게 전달해주는 방식이지만, Reverse 의 경우 프록시임을 모르고 그림에서의 example.com 으로 요청을 하면 실제 example.com 도메인을 가지고 있는 프록시 서버는 myapp.exmaple.com으로 다시 요청을 해준다. (필요하다면 포트도 원하는 포트로 요청이 된다.) 그 후 리턴받은 결과를 프록시가 유저에게 전달해주는 것을 Reverse Proxy 라고 한다.
 feature_text: |
   Apache Reverse Proxy 로 Basic Auth, Port Forwarding 하기
 feature_image: "https://picsum.photos/2560/600?random"
