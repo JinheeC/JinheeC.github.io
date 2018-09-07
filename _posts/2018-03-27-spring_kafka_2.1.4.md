@@ -91,6 +91,7 @@ send(Message<?> message)
 > NOTE: ***ProducerRecord와 Message의 차이***
 > ProducerRecord: 카프카로 보내지는 레코드로써 `토픽, 파티션, key, value, 헤더, 타임스탬프`를 가진다.
 > Message: Spring의 Message 객체로써 헤더와 페이로드를 가지고 있다. 이 경우 message의 헤더 부분에 `토픽, 파티션, key, 타임스탬프`를 가지고 있게 된다. `value(data)`는 payload 에 들고 있다. 즉 ProducerRecord의 값을 헤더와 페이로드로 나눠서 가지고 있게 됨.
+
 > NOTE: ***send시 비동기 콜백 사용하기*** 
 > ListenableFuture에 ListenableFutureCallback 을 등록해서 하나의 send 에 대해서 전송이 완료되었을 때 콜백을 설정할 수 도 있고 KafkaTemplate에 ProducerListener를 등록해서 KafkaTemplate의 모든 send 에 대해서 전송이 완료되었을 때 콜백을 설정할수 있다. 
 > ``` java
@@ -99,24 +100,22 @@ send(Message<?> message)
 > boolean isInterestedInSuccess();
 > ```
 
-> NOTE: 디폴트 ***Partitioning 전략***
-> * 파티션이 정해졌다면 정해진 파티션으로 파티셔닝
+> NOTE: 디폴트 ***Partitioning 전략***  
+> * 파티션이 정해졌다면 정해진 파티션으로 파티셔닝 
 > * 파티션이 정해지지 않았을때
 >    * Key가 정해졌다면 key 의 hash 값을 기준으로 파티셔닝
 >    * key도 정해지지 않았다면 Round-Robin 방식으로 파티셔닝
 
     
-> NOTE: KafkaTemplate의 send() 마다 하는 일.
+> NOTE: KafkaTemplate의 send() 마다 하는 일.  
 > `트랜젝션이 아니면` Producer를 생성해서 Producer 가 record를 send 하도록 시킨다. 그리고 send 가 끝나고 돌아오는 RecordMetadata 로 SendResult 를 만들고 만약에 ProducerListener 로 설정해 줬던 콜백이 있다면 해당 콜백을 실행시켜준다. 트랜잭션이 아닐 경우 Producer는 1개다.
 
 
-> NOTE:  설정에 따른 timestamp 값 
+> NOTE:  설정에 따른 timestamp 값    
 > 토픽이 `CREATE_TIME` 을 사용하도록 설정이 되어있으면 
 >	* 타임스탬프는 파라미터로 넘겨주는 값을 사용하거나
 >	* 타임스탬프를 넘겨주지 않았다면 생성시킨다. 
-
-
-> 토픽이 `LOG_APPEND_TIME` 을 사용하도록 설정되어있으면
+> 토픽이 `LOG_APPEND_TIME` 을 사용하도록 설정되어있으면  
 >	* 파라미터로 주어진 타임스탬프는 무시되어지고 브로커가 브로커 로컬타임을 사용해서 메세지를 만들게 된다.
 
 
@@ -157,12 +156,12 @@ public String listen(String in) {
 }
 ```
 
-> NOTE: ***RequestReplyFuture***(from sendAndReceive)와 ***ListenableFuture***(from send)의 ***차이***
+> NOTE: ***RequestReplyFuture***(from sendAndReceive)와 ***ListenableFuture***(from send)의 ***차이***    
 > * RequestReplyFuture: RequestReplyFuture 로 SendResult 와 ConsumerRecord를 얻을 수 있다.
 > * ListenableFuture: ListenableFuture로 SendResult를 얻을 수 있다.
 
 
-> NOTE: ***@SendTo*** 사용법
+> NOTE: ***@SendTo*** 사용법     
 > @SendTo : 리턴값이 헤더에 들어있는 Reply 용 Topic으로 Reply(Produce) 된다.
 > @SendTo("topicA") : 리턴값이 topicA 라는 토픽으로 Reply(Produce) 된다.
 
@@ -205,7 +204,7 @@ public class ConsumerConf {
 ```
 메시지는 리스너가 poll() 할 때마다 리스너에게 전달되는데 메시지 처리가 끝나면 commit 을 통해 현재 offset을 바꿔주게 된다. commit 이 이루어지는 시점은 설정에 따라 달라지는데 `enable.auto.commit` 이 true 로 설정되어있다면 설정된 interval 마다 자동으로 커밋하게 된다. (기본은 true)
 
-> NOTE: 정확한 ***commit 시점***을 정하려면
+> NOTE: 정확한 ***commit 시점***을 정하려면     
 > enable.auto.commit 를 false 로 설정하고 아래의 AckMode 중 하나를 선택하고 설정면 된다.
 > RECORD = 리스너가 레코드를 프로세싱 하고 나서 오프셋 커밋
 > BATCH = poll 이 다 처리가되고 모든 레코드가 리턴되면 오프셋 커밋
@@ -227,7 +226,7 @@ public void listen(String data) {
 ```
 컨테이너가 리스너에게 Spring 의 Message 타입으로 넣어주기 때문에 파라미터에는 메시지로 보냈던 Value 부분 즉, payload 에 해당하는 데이터 타입으로 받는다. 만약 Value 가 아닌 다른 정보가 필요하다면 헤더에서 값을 찾으면 된다. 그 과정 대신에 어차피 Message로 보내주기 때문에 Message로 받아도 가능하다.
 
-> NOTE: 특정 파티션 설정 및 초기 오프셋 설정 가능. 초기 오프셋을 설정해 주면 어플리케이션이 새로 시작할 때 마다 초기 오프셋 부터 읽게 된다.
+> NOTE: 특정 파티션 설정 및 초기 오프셋 설정 가능. 초기 오프셋을 설정해 주면 어플리케이션이 새로 시작할 때 마다 초기 오프셋 부터 읽게 된다.   
 >``` java
 > @KafkaListener(id = "bar", topicPartitions =
 >   { @TopicPartition(topic = "topic1", partitions = { "0", "1" }),
@@ -235,7 +234,7 @@ public void listen(String data) {
 >     partitionOffsets = @PartitionOffset(partition = "1", initialOffset = "100"))
 >   })
 > ```
-> 
+
 > NOTE: ***헤더*** 값을 얻으려면 아래와 같이 얻을 수 있다. 
 >``` java
 > public void listen(@Payload String value,
@@ -247,7 +246,7 @@ public void listen(String data) {
 >```
 
 
-> NOTE: 배치로 ***한번에 모든 레코드 받기*** 
+> NOTE: 배치로 ***한번에 모든 레코드 받기***   
 > 기본으로는 배치가 아니기 때문에 한번 Poll()해서 가져온 Record 들이 하나씩 리스너 메소드로 들어오게 되는데 아래와같이 설정해 주면 리스트 타입으로 한번에 받을 수 있다. (header도 리스트로 들어온다.)
 > ``` java
 > @Bean
@@ -293,7 +292,7 @@ static class MultiListenerBean {
 기본으로 제공되어지는 ***StringJsonMessageConverter***는 TypePrecedence 가 있어서 @KafkaListener가 붙어있는 메소드의 파라미터 타입이 메세지 컨버터에게 가서 그 타입에 맞게 deserialize 된다. 
 카프카 탬플릿에 바로 주입해서 사용할 수 있다. 
 
-> NOTE: StringJsonMessageConverter 의 ***타입 추론***
+> NOTE: StringJsonMessageConverter 의 ***타입 추론***   
 > 위에 언급된 것처럼 메소드의 파라미터 타입을 보고 추론하는 것이기 때문에 @KafkaListener가 클래스 레벨에 붙어 있고 메소드에는 @KafkaHandler를 쓰는 상황에서는 타입추론이 불가능하다. 그래서 이 경우에는 TypePrecedence 를 TYPE_ID 로 사용해야 한다. (default 는 TypePrecedence.INFERRED) TypePrecedence 타입이 INFERRED 가 아니면 헤더에서 데이터타입을 찾도록 로직이 구현되어있다. 즉 ***메소드레벨, 클래스 레벨 또는 인터페이스 레벨에 @KafkaListener 를 사용***할 수 있고 대신 메소드레벨이 아니라면 헤더에 변환해야 할 데이터 타입을 명시해줘야 한다.
 
 
@@ -355,7 +354,7 @@ concurrentKafkaListenerContainerFactory.getContainerProperties().setErrorHandler
 ```
 
 리스너 어노테이션이 붙은 메소드가 처리하지 못하고 예외를 던지면 컨테이너로 다시 던져질 것이고 메세지는 컨테이너 설정에 해준것 대로 에러핸들링이 될 것이다.
-> NOTE: error 발생 시 offset 조정
+> NOTE: error 발생 시 offset 조정   
 > 컨테이너 레벨에 에러핸들러든 리스너 레벨의 에러핸들러ConsumerAwareListenerErrorHandler ConsumerAwareContainerErrorHandler가 있는데 이 구현체로 에러 발생시 offset 조정을 할 수 있다. (대신 컨테이너 레벨의 offset 조정시에는 ackOnError를 false로 설정해야 한다.)
 
 ## 예제 소스
