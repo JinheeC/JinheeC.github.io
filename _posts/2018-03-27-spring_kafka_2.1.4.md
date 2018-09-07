@@ -175,6 +175,7 @@ MessageListenerContainer의 구현체는 2가지가 있는데 `KafkaMessageListe
 
 #### ListenerContainer 사용
 
+
 ``` java
 @EnableKafka
 @Configuration
