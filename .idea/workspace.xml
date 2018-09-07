@@ -58,16 +58,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="687" />
+          <entry key="md" value="693" />
           <entry key="scss" value="18" />
-          <entry key="txt" value="245" />
+          <entry key="txt" value="263" />
           <entry key="yml" value="158" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="687" />
-          <entry key="PLAIN_TEXT" value="245" />
+          <entry key="Markdown" value="693" />
+          <entry key="PLAIN_TEXT" value="263" />
           <entry key="SCSS" value="18" />
           <entry key="YAML" value="158" />
         </counts>
@@ -80,8 +80,8 @@
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="170">
-                <caret line="8" column="191" selection-start-line="8" selection-start-column="191" selection-end-line="8" selection-end-column="191" />
+              <first_editor relative-caret-position="204">
+                <caret line="11" column="138" selection-start-line="11" selection-start-column="138" selection-end-line="11" selection-end-column="138" />
               </first_editor>
               <second_editor />
             </state>
@@ -285,7 +285,7 @@
     <property name="SearchEverywhereHistoryKey" value="settin&#9;FILE&#9;file:///Users/skp/Documents/blog/_sass/_settings.scss&#10;sty&#9;FILE&#9;file:///Users/skp/Documents/blog/assets/styles.scss" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536300016943" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536300511601" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -356,7 +356,7 @@
       <option name="presentableId" value="Default" />
       <updated>1535940613258</updated>
       <workItem from="1535940614785" duration="7791000" />
-      <workItem from="1536025481645" duration="6599000" />
+      <workItem from="1536025481645" duration="6913000" />
     </task>
     <task id="LOCAL-00001" summary="add excerpt">
       <created>1535953691346</created>
@@ -512,11 +512,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536299814645</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="edit image size">
+      <created>1536300075165</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1536300075165</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14390000" />
+    <option name="totallyTimeSpent" value="14704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -573,7 +580,8 @@
     <MESSAGE value="edit note" />
     <MESSAGE value="edit" />
     <MESSAGE value="add license" />
-    <option name="LAST_COMMIT_MESSAGE" value="add license" />
+    <MESSAGE value="edit image size" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit image size" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/logo.svg">
@@ -906,8 +914,8 @@
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="170">
-            <caret line="8" column="191" selection-start-line="8" selection-start-column="191" selection-end-line="8" selection-end-column="191" />
+          <first_editor relative-caret-position="204">
+            <caret line="11" column="138" selection-start-line="11" selection-start-column="138" selection-end-line="11" selection-end-column="138" />
           </first_editor>
           <second_editor />
         </state>
