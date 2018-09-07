@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1574c279-a1d0-4bda-8126-b72a4917ee61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index-cp-origin.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-03-27-spring_kafka_2.1.4.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-27-spring_kafka_2.1.4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +37,7 @@
           <entry key="Gemfile" value="1" />
           <entry key="gemspec" value="1" />
           <entry key="html" value="3" />
-          <entry key="md" value="84" />
+          <entry key="md" value="86" />
           <entry key="png" value="3" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="6" />
@@ -48,7 +49,7 @@
         <counts>
           <entry key="HTML" value="3" />
           <entry key="Image" value="3" />
-          <entry key="Markdown" value="84" />
+          <entry key="Markdown" value="86" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="6" />
@@ -58,7 +59,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="619" />
+          <entry key="md" value="684" />
           <entry key="scss" value="18" />
           <entry key="txt" value="230" />
           <entry key="yml" value="158" />
@@ -66,7 +67,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="619" />
+          <entry key="Markdown" value="684" />
           <entry key="PLAIN_TEXT" value="230" />
           <entry key="SCSS" value="18" />
           <entry key="YAML" value="158" />
@@ -76,113 +77,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-05-08-Kafka_Stream_1.1.0.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="170">
-                <caret line="865" column="26" selection-start-line="865" selection-start-column="26" selection-end-line="865" selection-end-column="26" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/styles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_sass/_settings.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-05-30-DesignPatternAndSpring.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="599">
-                <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-07-06-Spring_Security_Remember_Me.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="145">
-                <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-07-31-Spring-Cloud-Sleuth.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="427">
-                <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-03-27-spring_kafka_2.1.4.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="257">
-                <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-04-03-EADDRNOTAVAIL_Problem.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="458">
-                <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-04-12-Spring_cloud_sleuth_2.0.0.M9.md">
+        <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="153">
-                <caret line="102" column="30" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+                <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_sass/_syntax.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -205,22 +107,23 @@
       <find>78BBBB</find>
       <find>3c5d5d</find>
       <find>edaToolsUserDetailsService</find>
-      <find>edaToolAuthenticationSuccessHandler</find>
       <find>EdaKafkaConsumerFactory</find>
       <find>코드에 적용</find>
-      <find>Function</find>
       <find>NOTE</find>
-      <find>eda</find>
       <find>NOTE:</find>
       <find>topic</find>
       <find>ListenableFuture</find>
       <find>listenercontainer</find>
+      <find>Function</find>
+      <find>listenerconta</find>
+      <find>edaToolAuthenticationSuccessHandler</find>
+      <find>eda</find>
     </findStrings>
     <replaceStrings>
       <replace>#fff4e7</replace>
       <replace>78BBBB</replace>
-      <replace>customAuthenticationSuccessHandler</replace>
       <replace>79BBBB</replace>
+      <replace>customAuthenticationSuccessHandler</replace>
       <replace>CustomKafkaConsumerFactory</replace>
     </replaceStrings>
   </component>
@@ -260,7 +163,6 @@
       <list>
         <option value="$PROJECT_DIR$/_posts/2016-08-27-example-post-one.md" />
         <option value="$PROJECT_DIR$/example/2016-08-28-example-post-two.md" />
-        <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-11-HTTPAgent.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-17-Node_Cache_module.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-17-spring_kafka_2.1.4_Stateful_retry.md" />
@@ -280,6 +182,7 @@
         <option value="$PROJECT_DIR$/_posts/2018-05-08-Kafka_Stream_1.1.0.md" />
         <option value="$PROJECT_DIR$/_posts/2018-05-30-DesignPatternAndSpring.md" />
         <option value="$PROJECT_DIR$/_posts/2018-03-27-spring_kafka_2.1.4.md" />
+        <option value="$PROJECT_DIR$/index.md" />
       </list>
     </option>
   </component>
@@ -357,21 +260,6 @@
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="_sass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -385,7 +273,7 @@
     <property name="SearchEverywhereHistoryKey" value="settin&#9;FILE&#9;file:///Users/skp/Documents/blog/_sass/_settings.scss&#10;sty&#9;FILE&#9;file:///Users/skp/Documents/blog/assets/styles.scss" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535967528491" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536299792880" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -401,6 +289,7 @@
       <recent name="$PROJECT_DIR$/example" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/_posts" />
     </key>
   </component>
@@ -455,7 +344,7 @@
       <option name="presentableId" value="Default" />
       <updated>1535940613258</updated>
       <workItem from="1535940614785" duration="7791000" />
-      <workItem from="1536025481645" duration="5805000" />
+      <workItem from="1536025481645" duration="6330000" />
     </task>
     <task id="LOCAL-00001" summary="add excerpt">
       <created>1535953691346</created>
@@ -597,11 +486,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536298988597</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="edit">
+      <created>1536299103589</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1536299103589</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13596000" />
+    <option name="totallyTimeSpent" value="14121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -656,7 +552,8 @@
     <MESSAGE value="typo" />
     <MESSAGE value="change static method color" />
     <MESSAGE value="edit note" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit note" />
+    <MESSAGE value="edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/logo.svg">
@@ -860,16 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="901">
-            <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thanks.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -899,13 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/_settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -981,6 +861,31 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="257">
             <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index-cp-origin.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="153">
+            <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>
