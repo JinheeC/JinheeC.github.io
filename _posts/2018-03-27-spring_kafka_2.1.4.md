@@ -38,9 +38,7 @@ feature_image: "https://picsum.photos/2560/600?random"
 * KafkaAdmin이 초기화 될 때 이 컨피그 값을 가지고 그에 맞도록 AdminClient 를 생성 하고 토픽을 만들도록 함.
 
 > NOTE: ***KafkaAdmin과 AdminClient의 차이***
->
 > KafkaAdmin:  AdminClient 한테 토픽을 만들라고 위임하는 어드민.
->
 > AdminClient:  토픽, 브로커, 등 설정을 전반적으로 관리 함.
 > ```
 > INFO Topic creation {"version":1,"partitions":{"8":[0],"4":[0],"9":[0],"5":[0],"6":[0],"1":[0],"0":[0],"2":[0],"7":[0],"3":[0]}} (kafka.admin.AdminUtils$)
@@ -91,47 +89,36 @@ send(Message<?> message)
 리턴값은 ListenableFuture<SendResult<key, data>> 이고 Future를 상속한 클래스이다. 콜백이 설정되어있을때 future가 끝나면 그 콜백이 즉시 실행된다.
 
 > NOTE: ***ProducerRecord와 Message의 차이***
->
 > ProducerRecord: 카프카로 보내지는 레코드로써 `토픽, 파티션, key, value, 헤더, 타임스탬프`를 가진다.
->
 > Message: Spring의 Message 객체로써 헤더와 페이로드를 가지고 있다. 이 경우 message의 헤더 부분에 `토픽, 파티션, key, 타임스탬프`를 가지고 있게 된다. `value(data)`는 payload 에 들고 있다. 즉 ProducerRecord의 값을 헤더와 페이로드로 나눠서 가지고 있게 됨.
->
->
 > NOTE: ***send시 비동기 콜백 사용하기*** 
->
 > ListenableFuture에 ListenableFutureCallback 을 등록해서 하나의 send 에 대해서 전송이 완료되었을 때 콜백을 설정할 수 도 있고 KafkaTemplate에 ProducerListener를 등록해서 KafkaTemplate의 모든 send 에 대해서 전송이 완료되었을 때 콜백을 설정할수 있다. 
->
 > ``` java
 > void onSuccess(String topic, Integer partition, K key, V value, RecordMetadata recordMetadata);
->
 > void onError(String topic, Integer partition, K key, V value, Exception exception);
->
 > boolean isInterestedInSuccess();
 > ```
-> 
+
 > NOTE: 디폴트 ***Partitioning 전략***
->
 > * 파티션이 정해졌다면 정해진 파티션으로 파티셔닝
 > * 파티션이 정해지지 않았을때
 >    * Key가 정해졌다면 key 의 hash 값을 기준으로 파티셔닝
 >    * key도 정해지지 않았다면 Round-Robin 방식으로 파티셔닝
->     
+
+    
 > NOTE: KafkaTemplate의 send() 마다 하는 일.
->
 > `트랜젝션이 아니면` Producer를 생성해서 Producer 가 record를 send 하도록 시킨다. 그리고 send 가 끝나고 돌아오는 RecordMetadata 로 SendResult 를 만들고 만약에 ProducerListener 로 설정해 줬던 콜백이 있다면 해당 콜백을 실행시켜준다. 트랜잭션이 아닐 경우 Producer는 1개다.
->  
-> NOTE:  설정에 따른 timestamp 값
-> 
+
+
+> NOTE:  설정에 따른 timestamp 값 
 > 토픽이 `CREATE_TIME` 을 사용하도록 설정이 되어있으면 
->
 >	* 타임스탬프는 파라미터로 넘겨주는 값을 사용하거나
->
 >	* 타임스탬프를 넘겨주지 않았다면 생성시킨다. 
->
->
+
+
 > 토픽이 `LOG_APPEND_TIME` 을 사용하도록 설정되어있으면
->
 >	* 파라미터로 주어진 타임스탬프는 무시되어지고 브로커가 브로커 로컬타임을 사용해서 메세지를 만들게 된다.
+
 
 그 이외의 메소드
 ``` java
@@ -142,7 +129,8 @@ List<PartitionInfo> partitionsFor(String topic);
 위 두 메소드는 단순히 Producer 한테 해당 동작을 위임한다.
 
 > NOTE: ***sendResult***에는 ProducerRecord와 RecordMetadata(ack) 가 있다. 
->
+
+
 > NOTE: send 의 결과로 리턴되는 SendResult 값을 바로 받으려면 쓰레드를 값이 도착할 때 까지 멈추고 기다리면되는데 기본적으로 future가 가지고 있는 get()을 활용하거나 카프카 탬플릿의 flush()를 사용할 수도 있다. auto flush 기능을 사용하면 성능 저하가 있으므로 주의.
 
 
@@ -170,15 +158,12 @@ public String listen(String in) {
 ```
 
 > NOTE: ***RequestReplyFuture***(from sendAndReceive)와 ***ListenableFuture***(from send)의 ***차이***
->
 > * RequestReplyFuture: RequestReplyFuture 로 SendResult 와 ConsumerRecord를 얻을 수 있다.
->
 > * ListenableFuture: ListenableFuture로 SendResult를 얻을 수 있다.
->
+
+
 > NOTE: ***@SendTo*** 사용법
->
 > @SendTo : 리턴값이 헤더에 들어있는 Reply 용 Topic으로 Reply(Produce) 된다.
->
 > @SendTo("topicA") : 리턴값이 topicA 라는 토픽으로 Reply(Produce) 된다.
 
 ****
@@ -221,23 +206,16 @@ public class ConsumerConf {
 메시지는 리스너가 poll() 할 때마다 리스너에게 전달되는데 메시지 처리가 끝나면 commit 을 통해 현재 offset을 바꿔주게 된다. commit 이 이루어지는 시점은 설정에 따라 달라지는데 `enable.auto.commit` 이 true 로 설정되어있다면 설정된 interval 마다 자동으로 커밋하게 된다. (기본은 true)
 
 > NOTE: 정확한 ***commit 시점***을 정하려면
->
 > enable.auto.commit 를 false 로 설정하고 아래의 AckMode 중 하나를 선택하고 설정면 된다.
-> 
 > RECORD = 리스너가 레코드를 프로세싱 하고 나서 오프셋 커밋
->
 > BATCH = poll 이 다 처리가되고 모든 레코드가 리턴되면 오프셋 커밋
->
 > TIME = (마지막 커밋 이후의 시간이 ackTime보다 작으면)poll 이 다 처리되고 모든 레코드가 리턴될 때 오프셋 커밋
->
 > COUNT = (마지막 커밋 이후 레코드 개수가 받아지는 한)  poll 이 다 처리되고 모든 레코드가 리턴 되었다면 오프셋 커밋
->
 > COUNT_TIME = 두개 조건 만족
->
 > MANUAL = ack 도착 하면 BATCH 처럼 행동함.
->
 > MANUAL_IMMEDIATE =  리스너가 Acknowledgment.acknowledge() 부를때 바로 커밋
->
+
+
 > NOTE: max.poll.records 프로퍼티로 한번에 가져오는 poll 개수 조정 가능
 
 `@KafkaListener` 를 메소드에 붙여서 리스너를 만들고 토픽을 Consume 하는 코드는 아래와 같다. 이 어노테이션을 사용하려면 @Configuration 클래스 중 하나에 `@EnableKafka` 어노테이션을 달아 줘야 한다. 이 어노테이션은 KafkaListenerContainerFactory를 찾기 때문에 보통 ListenerContainer 설정하는 클래스에 같이 달아준다.
@@ -267,9 +245,9 @@ public void listen(String data) {
 >       @Header(KafkaHeaders.RECEIVED_TIMESTAMP) long ts
 >       )
 >```
-> 
+
+
 > NOTE: 배치로 ***한번에 모든 레코드 받기*** 
->
 > 기본으로는 배치가 아니기 때문에 한번 Poll()해서 가져온 Record 들이 하나씩 리스너 메소드로 들어오게 되는데 아래와같이 설정해 주면 리스트 타입으로 한번에 받을 수 있다. (header도 리스트로 들어온다.)
 > ``` java
 > @Bean
@@ -316,7 +294,6 @@ static class MultiListenerBean {
 카프카 탬플릿에 바로 주입해서 사용할 수 있다. 
 
 > NOTE: StringJsonMessageConverter 의 ***타입 추론***
->
 > 위에 언급된 것처럼 메소드의 파라미터 타입을 보고 추론하는 것이기 때문에 @KafkaListener가 클래스 레벨에 붙어 있고 메소드에는 @KafkaHandler를 쓰는 상황에서는 타입추론이 불가능하다. 그래서 이 경우에는 TypePrecedence 를 TYPE_ID 로 사용해야 한다. (default 는 TypePrecedence.INFERRED) TypePrecedence 타입이 INFERRED 가 아니면 헤더에서 데이터타입을 찾도록 로직이 구현되어있다. 즉 ***메소드레벨, 클래스 레벨 또는 인터페이스 레벨에 @KafkaListener 를 사용***할 수 있고 대신 메소드레벨이 아니라면 헤더에 변환해야 할 데이터 타입을 명시해줘야 한다.
 
 
@@ -379,7 +356,6 @@ concurrentKafkaListenerContainerFactory.getContainerProperties().setErrorHandler
 
 리스너 어노테이션이 붙은 메소드가 처리하지 못하고 예외를 던지면 컨테이너로 다시 던져질 것이고 메세지는 컨테이너 설정에 해준것 대로 에러핸들링이 될 것이다.
 > NOTE: error 발생 시 offset 조정
->
 > 컨테이너 레벨에 에러핸들러든 리스너 레벨의 에러핸들러ConsumerAwareListenerErrorHandler ConsumerAwareContainerErrorHandler가 있는데 이 구현체로 에러 발생시 offset 조정을 할 수 있다. (대신 컨테이너 레벨의 offset 조정시에는 ackOnError를 false로 설정해야 한다.)
 
 ## 예제 소스

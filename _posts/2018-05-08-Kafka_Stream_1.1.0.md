@@ -864,7 +864,6 @@ StoreBuilder<KeyValueStore<String, Long>> countStoreSupplier = Stores.keyValueSt
 ```
 만약 changelog 가 disable 되었으면 State Store 는 더이상 내결함성을 가지지 않고 어떠한 `standby replica` 도 가지지 않는다. 
 > NOTE: Standby Replica 란?
->
 > 대기중인 복제본을 말한다. 로컬 State Store 의 복사본인데 카프카 스트림은 config 에 설정된 지정된 수의 복제본을 작성하고 최신상태로 유지한다. 이 standBy Relica 는 시스템 오류로 state store 가 복구되어야 하는 경우 그 복구 지연 시간을 최소화 하는데 사용되어진다. 오류가 발생한 인스턴스에서 이전에 실행중이던 Task 는 standby replica 가 있는 인스턴스에서 재시작 되고 로컬 State Store 를 복구하는 프로세스가 최소화 된다. 
 
 changelog 를 enable 하는 예제이다. 추가적으로 changelog 토픽에 대한 config 도 해주는 코드이다.

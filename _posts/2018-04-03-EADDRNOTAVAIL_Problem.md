@@ -44,13 +44,9 @@ let axiosInstant = axios.create({
 });
 ```
 > NOTE: ***http.Agent*** 를 생성할 때 설정할수 있는 ***컨피그 속성***은 아래와 같다. 위의 예제 코드의 경우 그 중 3가지 속성에 대해서만 정의한 예제이다.
->
 > keepAlive: boolean (default: false)
->
 > keepAliveMsecs: number (default: 1000ms)
->
 > maxSockets: number (default: Infinity)
->
 > maxFreeSockets: number (default: 256) 비어있는 상태로 열어 둘 수 있는 최대 소캣 수
 
 

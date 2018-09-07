@@ -101,7 +101,6 @@ span.tag("message.version", "1.2.3");
 우리가 아는 Span 이라는 클래스는 SpanCustomizer 인터페이스를 구현한 추상 클래스이고 실제 데이터 타입은 AutoValue_RealSpan 이라는 클래스에 해당한다. 
 
 > NOTE: ***Noop***과 Real 의 의미?
->  
 >  Noop 의 의미는 집킨 서버로 전송되는 실제 스팬이냐에 대한 여부에 해당한다. 실제 집킨으로 보내지는 스팬이라면 RealSpan일 것이고 그렇지 않다면 NoopSpan일 것이다.
 
 아래는 SpanCustomizer의 메소드와 Span 의 메소드를 나열한 것이다. 메소드를 직접 보면 이해가 빠를 수 있다.

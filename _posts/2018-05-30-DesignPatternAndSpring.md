@@ -114,12 +114,9 @@ if(object2 instanceOf SubClass){
 ![Alt text](https://monosnap.com/image/4PhBz7jA2sgfhPLt99xFV3q8ZoQbuW)
 
 > NOTE: Inversion of Control (제어의 역전)
->  
 > 원래 POJO 자바에선 객체를 사용하려면 1. 생성하고 2. 객체를 호출한다. 
-> 
 > 하지만 스프링에서는 그 객체를 사용하고 싶은 클래스가 생성자로 받아서 사용하기 때문에 의존관계가 주입되는 형태가 된다.
 > 그래서 역전된 의존관계라 해서 제어가 역전되었다 라고하는 것이다. 이건 사실 스프링만의 특징은 아니다. 주로 spring 이 이 개념을 사용하고 있기때문에 spring의 특징으로 여겨진다. 그렇다면 왜 생성자를 통해 받아서 사용해야 하고 이런 패턴이 왜 등장하게 되었을까.
-> 
 > 일반적으로 객체를 사용하는 방식은 new 객체()로 객체의 생성자, 객체의 이름 등이 바뀌게 되면 수정해줘야 할 곳이 많이 생길 수 있다. 그래서 IoC 라는 개념이 사용되었다.
 
 ## Factory Method Pattern
@@ -127,7 +124,6 @@ if(object2 instanceOf SubClass){
 ![Alt text](https://monosnap.com/image/KuT4orHZ2kL4AgQyIOsqDNpTsv5XMq)
 
 > NOTE: Abstract Factory Pattern 과 Factory Method Pattern 의 차이
-> 
 > Factory Method 는 Single method 다.  그래서 하위 클래스에서 해당 메소드를 오버라이드 하게 된다. 사용할때 factory 인터페이스를 인스턴스 변수로 받아서 인스턴스 안의 팩토리 메소드를 사용한다.
 > Abstract Factory 는 오브젝트다. 그래서 그 오브젝트 안에 여러개의 팩토리성 매소드들이 많이 있다. 사용할때  Factory Method Pattern을 가진 해당 클래스 안에 있는 비즈니스 로직에서 해당 메소드를 호출해 객체를 만든다.
 
@@ -136,7 +132,6 @@ if(object2 instanceOf SubClass){
 ![Alt text](https://monosnap.com/image/xXnbmgT9FTjxN3tpoxSy51oW0ZkqUl)
 
 > NOTE: 프레임워크와 라이브러리의 차이
-> 
 > 제어의 주체가 다르다. 라이브러리는 개발자의 코드에서 사용되는 것이고 프레임워크는 프레임 워크가 개발자의 코드를 사용하는 것이다. 
 
 ## Proxy Pattern
@@ -164,21 +159,14 @@ public class LoggerAspect {
 }
 ```
 > NOTE: Spring의 AOP 개념이란?
->  
 > AOP 는 Aspect Oriented Programming 의 약자이다. 관점지향 프로그래밍이라고 불리는데 잘 와닫는 이름은 아니지만 프로그램에서 반복되는 공통 비즈니스로직를 핵심 비즈니스와 분리해서 프레임 워크가 공통 로직을 처리해주는 일을 말한다. 이 개념은 프레임워크가 개발자의 코드를 사용해서 공통로직을 주입해주는 개념인데 이 프레임워크의 로직은 내부적으로 Proxy Pattern을 사용한다. 그래서 개발자의 코드의 전 후에 알맞는 공통로직이 처리되는 것이다. 그래서 위의 코드와 같이 Proxy Pattern 을 상속구조를 POJO로 직접 만들지 않고도 사용할 수 있는 **Aspect** 어노테이션이 있는것이다.  
->  
 > 아래는 관련 AOP 용어다.
->  
 > Joinpoint: 공통 관심사항이 적용될 그 **대상**이 될 수 있는 메소드를 말한다. 
->  
 > Pointcut: Joinpoint 중에 실제 대상을 말한다.
-> 
 > Advice: 어느 시점에 공통관심사항을 적용할것인지에 대한 설명이다. (before, after-running, after-throwing, after, around) 
->  
 > Weaving: Proxy Pattern 이 만들어지는 것. (스프링은 실행시 위빙)
->  
 > Aspect: 여러 객체에 공통적용되는 공통 관심 사항
->  
+
 
 ## Strategy Pattern
 같은 목적의 알고리즘인데 구현로직이 조금씩 상황에 따라 다를 경우 여러개의 하위클래스를 둬서 그때그때 다른 전략을 사용할 수 있게하는 패턴이다. 

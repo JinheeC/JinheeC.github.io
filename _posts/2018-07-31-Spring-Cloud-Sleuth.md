@@ -76,7 +76,7 @@ public class KafkaTracer {
 
 maven 또는 gradle 디팬던시로 `compile ('org.springframework.cloud:spring-cloud-starter-zipkin')` 를 추가하고 아래와 같이 yml 설정파일을 설정해주면 굉장히 간단하게 zipkin 트래이싱을 zipkin 서버에서 확인할 수 있다. 
 
-``` java
+``` plain
 spring:
   zipkin:
     base-url: http://zipkin-server.com:9411 
