@@ -4,7 +4,7 @@ categories:
 - Spring Security
 excerpt: |
   Bold 된 부분에서 보듯 Internal secret key 를 넣어주고 있다 그리고 rememberMeService 에도 internal secret key로 생성한 TokenBasedRememberMeServices 를 만들어주는 것을 볼 수 있다.
-  이 의미는 key와 edaToolsUserDetailsService(맞는 사용자인지 확인하는 로직)를 가지고 토큰기반의 RememberMeService 를 만들어서 사용하겠다는 뜻이고 그 Key 와 같은 Key 로 RememberMeConfigurer 에서 init() 과정을 통해 
+  이 의미는 key와 customUserDetailsService(맞는 사용자인지 확인하는 로직)를 가지고 토큰기반의 RememberMeService 를 만들어서 사용하겠다는 뜻이고 그 Key 와 같은 Key 로 RememberMeConfigurer 에서 init() 과정을 통해 
 feature_text: |
   Spring Security Remember Me 가 동작하지 않는 경우
 feature_image: "https://picsum.photos/2560/600?random"
@@ -34,7 +34,7 @@ private static final String **INTERNAL_SECRET_KEY** = "INTERNAL_SECRET_KEY";
             .formLogin()
             .successForwardUrl("/")
             .loginPage("/login")
-            .successHandler(edaToolAuthenticationSuccessHandler)
+            .successHandler(customAuthenticationSuccessHandler)
             .permitAll()
             .and()
             .rememberMe()
@@ -46,12 +46,12 @@ private static final String **INTERNAL_SECRET_KEY** = "INTERNAL_SECRET_KEY";
     }
 ...
 	private RememberMeServices **rememberMeServices()** {
-        return new TokenBasedRememberMeServices(SecurityConfig.INTERNAL_SECRET_KEY, edaToolsUserDetailsService);
+        return new TokenBasedRememberMeServices(SecurityConfig.INTERNAL_SECRET_KEY, customUserDetailsService);
     }
 }
 ```
 Bold 된 부분에서 보듯 Internal secret key 를 넣어주고 있다 그리고 rememberMeService 에도 internal secret key로 생성한 TokenBasedRememberMeServices 를 만들어주는 것을 볼 수 있다.
-이 의미는 key와 edaToolsUserDetailsService(맞는 사용자인지 확인하는 로직)를 가지고 토큰기반의 RememberMeService 를 만들어서 사용하겠다는 뜻이고 그 Key 와 같은 Key 로 RememberMeConfigurer 에서 init() 과정을 통해 RememberMe에 사용할 RememberMeAuthenticationProvider 를 만들게 된다.  그 provider 가 사용자가 접속을 하면 쿠키의 값과 비교하게 되는데 그 값을 비교한 직후 provider 와 TokenBasedRememberMeService (아래의 코드에서는 (RememberMeAuthenticationToken) authentication 부분 - TokenBasedRememberMeService의 상위클래스인 AbstractRememberMeServices 클래스가 TokenBasedRememberMeService 를 만들때 넣어준 internal secret key 로 RememberMeAuthenticationToken 을 만들게 된다. 그래서 TokenBasedRememberMeService 를 만들때 들고 있는 Key 가 아래의 코드의 RememberMeAuthenticationToken authentication이 들고 있게 됨.) 그래서 아래와 같이 Key 가 같지 않으면 BadCredentialsException 를 내고 쿠키를 삭제하기 때문에 같아야 한다.
+이 의미는 key와 customUserDetailsService(맞는 사용자인지 확인하는 로직)를 가지고 토큰기반의 RememberMeService 를 만들어서 사용하겠다는 뜻이고 그 Key 와 같은 Key 로 RememberMeConfigurer 에서 init() 과정을 통해 RememberMe에 사용할 RememberMeAuthenticationProvider 를 만들게 된다.  그 provider 가 사용자가 접속을 하면 쿠키의 값과 비교하게 되는데 그 값을 비교한 직후 provider 와 TokenBasedRememberMeService (아래의 코드에서는 (RememberMeAuthenticationToken) authentication 부분 - TokenBasedRememberMeService의 상위클래스인 AbstractRememberMeServices 클래스가 TokenBasedRememberMeService 를 만들때 넣어준 internal secret key 로 RememberMeAuthenticationToken 을 만들게 된다. 그래서 TokenBasedRememberMeService 를 만들때 들고 있는 Key 가 아래의 코드의 RememberMeAuthenticationToken authentication이 들고 있게 됨.) 그래서 아래와 같이 Key 가 같지 않으면 BadCredentialsException 를 내고 쿠키를 삭제하기 때문에 같아야 한다.
 
 ``` java
 RememberMeAuthenticationProvider.java

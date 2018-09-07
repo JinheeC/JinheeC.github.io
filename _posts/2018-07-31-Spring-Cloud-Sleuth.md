@@ -20,7 +20,7 @@ feature_image: "https://picsum.photos/2560/600?random"
 ``` java
 public class CustomKafkaConsumerFactory extends DefaultKafkaConsumerFactory {
 
-    public EdaKafkaConsumerFactory(Map configs) {
+    public CustomKafkaConsumerFactory(Map configs) {
         super(configs);
     }
 
@@ -35,7 +35,7 @@ public class CustomKafkaConsumerFactory extends DefaultKafkaConsumerFactory {
 ``` java
 public class CustomKafkaProducerFactory extends DefaultKafkaProducerFactory {
 
-    public EdaKafkaProducerFactory(Map configs) {
+    public CustomKafkaProducerFactory(Map configs) {
         super(configs);
     }
 
@@ -51,7 +51,7 @@ public class CustomKafkaProducerFactory extends DefaultKafkaProducerFactory {
 ``` java
 public class KafkaTracer {
     private static final KafkaTracing kafkaTracing = KafkaTracing.create(Tracing.newBuilder()
-                                                                                .localServiceName("EDA-GATEWAY")
+                                                                                .localServiceName("MY-SERVICE")
                                                                                 .currentTraceContext(new StrictCurrentTraceContext())
                                                                                 .spanReporter(AsyncReporter.create(URLConnectionSender.create("http://zipkin-url:9411/api/v2/spans")))
                                                                                 .build());
