@@ -96,7 +96,7 @@ navigation_header:
 #  Fork Alembic: https://github.com/daviddarnes/alembic
 
 navigation_footer:
-  Created by Jinhee: https://jinheec.github.io/about/
+  CC BY-NC-SA: https://creativecommons.org/licenses/by-nc-sa/2.0/
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/jinheeway
